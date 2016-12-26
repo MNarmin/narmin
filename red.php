@@ -56,7 +56,7 @@ if($_POST){
 	}
 	?>
 	<script>
-		location.href='index.php';
+		location.href='login.php';
 		</script>
 	<?php
 	}

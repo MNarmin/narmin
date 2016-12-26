@@ -3,7 +3,7 @@ $dblocation='localhost';
 $dbname='narmin';
 $dbusr='root';
 $dbpass='';
-$dbport=3305;
+$dbport=3306;
 
 $dbcon=	mysqli_connect ($dblocation,
 						$dbusr,

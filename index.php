@@ -1,4 +1,6 @@
-<?php require_once("templates/top.php");
+<?php
+session_start();
+require_once("templates/top.php");
 if ($_GET['url']){
 $file = $_GET['url'];
 }

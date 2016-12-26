@@ -2,8 +2,8 @@
 -- version 4.4.15.7
 -- http://www.phpmyadmin.net
 --
--- Хост: 127.0.0.1:3305
--- Время создания: Дек 23 2016 г., 20:37
+-- Хост: 127.0.0.1:3306
+-- Время создания: Дек 26 2016 г., 20:46
 -- Версия сервера: 5.7.13
 -- Версия PHP: 7.0.8
 
@@ -19,6 +19,23 @@ SET time_zone = "+00:00";
 --
 -- База данных: `narmin`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `accaunts`
+--
+
+CREATE TABLE IF NOT EXISTS `accaunts` (
+  `id` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `phone` tinytext NOT NULL,
+  `address` tinytext NOT NULL,
+  `data_rod` date NOT NULL,
+  `created_at` date NOT NULL,
+  `update_at` datetime NOT NULL,
+  `picture` tinytext NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -77,6 +94,12 @@ INSERT INTO `user` (`id`, `email`, `login`, `pass`, `datareg`, `lastvisit`, `blo
 --
 
 --
+-- Индексы таблицы `accaunts`
+--
+ALTER TABLE `accaunts`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Индексы таблицы `maintexts`
 --
 ALTER TABLE `maintexts`
@@ -92,6 +115,11 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT для сохранённых таблиц
 --
 
+--
+-- AUTO_INCREMENT для таблицы `accaunts`
+--
+ALTER TABLE `accaunts`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT для таблицы `maintexts`
 --

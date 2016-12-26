@@ -1,5 +1,15 @@
 <?php
+session_start();
 require_once('config/config.php');
+if($_SESSION['id']){
+$query = "SELECT * FROM user WHERE id = " . $_SESSION['id'];
+$auth = mysqli_query($dbcon, $query);
+if(!$auth){
+ exit('Ошибка запроса');
+}
+$auth_usr = mysqli_fetch_array($auth);
+}
+
 ?>
 <!Doctype html>
 <html>
@@ -14,7 +24,21 @@ require_once('config/config.php');
 </head>
 <body>
 <header class='shapka'>
-	<h1></h1>
+<?php
+if($_SESSION['id']){
+?>
+	<a href='/cobinet.php' class = 'btn btn-default my'>Кобинет
+<?=($auth_user['login'])?$auth_user['login']:'пользователя';?>
+	</a>
+	<a href='/logout.php' class = 'btn btn-default my'>Выход</a>
+<?php
+}else{
+?>
+	<a href='/red.php' class = 'btn btn-default my'>Регистрация</a>
+	<a href='/login.php' class = 'btn btn-default my'>Вход</a>
+<?php
+}
+?>
 	<img src='media/img/logo.png'/>
 
 </header>
