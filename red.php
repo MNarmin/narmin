@@ -1,4 +1,6 @@
-<?php require_once("templates/top.php");
+<?php 
+require_once("templates/top.php");
+require_once("libs/functions.php");
 if($_POST){
 	//echo "<pre>";
 	//print_r($_POST);
@@ -50,17 +52,7 @@ if($_POST){
 									NOW(),
 									'unblock'
 									)";
-	$in = mysqli_query($dbcon, $query);
-	if(!$in){
-		exit($query);
-	}
-	?>
-	<script>
-		location.href='login.php';
-		</script>
-	<?php
-	}
-
+	insert($query, 'login.php');
 }
 ?>
 

@@ -1,6 +1,7 @@
 <?php
 session_start();
 require_once('config/config.php');
+require_once("libs/functions.php");
 if($_SESSION['id']){
 $query = "SELECT * FROM user WHERE id = " . $_SESSION['id'];
 $auth = mysqli_query($dbcon, $query);

@@ -7,11 +7,8 @@ $file = $_GET['url'];
 else {
 $file='index';
 }
-$result=mysqli_query($dbcon,"SELECT * FROM maintexts WHERE url='$file'");
-if(!$result){
-exit('error');
-}
-$row = mysqli_fetch_array($result);
+$query = "SELECT * FROM maintexts WHERE url='$file'";
+$row = selectone($query);
 //echo "<pre>";
 //print_r($row);
 //echo "</pre>";// для вывода массива
