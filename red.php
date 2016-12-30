@@ -54,6 +54,7 @@ if($_POST){
 									)";
 	insert($query, 'login.php');
 }
+}
 ?>
 
 <form method='post' action='red.php'>
