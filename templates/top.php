@@ -10,8 +10,9 @@ if(!$auth){
 }
 $auth_usr = mysqli_fetch_array($auth);
 }
-
 ?>
+	
+
 <!Doctype html>
 <html>
 <head>
@@ -21,6 +22,11 @@ $auth_usr = mysqli_fetch_array($auth);
 <meta name='keywords' content=' welcome'>
 <link type='text/css' rel='stylesheet' href='media/css/style.css'/>
 <link  href="media/bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet"/>
+
+<script src = 'media/js/jquery-3.1.1.min.js'/>
+</script>
+<script src = 'media/js/main.js'/> 
+</script>
 
 </head>
 <body>
@@ -41,15 +47,17 @@ if($_SESSION['id']){
 }
 ?>
 	<img src='media/img/logo.png'/>
+	
+<div class='empty'></div>
 
 </header>
 	<nav class='topmenu'>
 		<a href='/' class="btn btn-success">Главная</a>
 		<a href='index.php?url=history'>История камня</a>
-		<a href='#'>Католог</a>
-		<a href='index.php?url=info'>Информация</a>
+		<a href='#' data-title = 'название сайта' data-body = 'описание' data-img = 'f.png' data-color = '#fff' >Католог</a>
+		<a href='index.php?url=info' data-body = 'описание' data-color = 'green'>Информация</a>
 		<a href='#'>Магазины</a>
-		<a href='index.php?url=contact'>Контакты</a>
+		<a href='index.php?url=contact'data-color = 'black' data-body = 'описание'>Контакты</a>
 		<a href='#'><img src="media/img/f.png"></a>
 		<a href='#'><img src="media/img/tw.png"/></a>
 	</nav>
