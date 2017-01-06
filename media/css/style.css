@@ -1,9 +1,48 @@
 body{
-background: url(../img/821231210.jpg);
+background: url(../img/no.jpg);
 background-size:cover;
 margin:0;
 padding:0;}
 
+.modal-window{
+position:fixed;
+top:150px;
+width:600px;
+margin-left:-300px;
+padding:20px;
+border: solid 1pz  gold;
+box-shadow:1px 1px 1px black;
+border-radius:6px;
+z-index:9;
+left:50%;
+background: white;
+}
+#jqeury-over{
+background: black;
+opacity:0.5;
+position:fixed;
+height:100%;
+width:100%;
+top:0;
+left:0;
+z-index:8;
+}
+.modal-close-btn{
+position:absolute;
+top:1px;;
+right:1px;
+margin:0;
+padding:0;
+text-decoration: none;
+color:red;
+font-size: 18px;
+}
+.modal-close-btn:before{
+position:relative;
+top:-1px;
+content:"Закрыть";
+font-size: 12px;
+}
 .shapka{
 height:240px;
 border-bottom: 1px red solid;

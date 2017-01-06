@@ -54,6 +54,7 @@ if($_SESSION['id']){
 	<nav class='topmenu'>
 		<a href='/' class="btn btn-success">Главная</a>
 		<a href='index.php?url=history'>История камня</a>
+		<a href='/accaunts.php' class="btn btn-success">Видео</a>
 		<a href='#' data-title = 'название сайта' data-body = 'описание' data-img = 'f.png' data-color = '#fff' >Католог</a>
 		<a href='index.php?url=info' data-body = 'описание' data-color = 'green'>Информация</a>
 		<a href='#'>Магазины</a>
