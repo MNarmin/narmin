@@ -18,7 +18,7 @@ function selectone($query){
 	global $dbcon;
 	$resalt = mysqli_query($dbcon, $query);
 	if(!$resalt){
-		exit('Ошибка');
+		exit($query);
 	}	
 	$row = mysqli_fetch_array($resalt);
 	return $row;
