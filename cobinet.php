@@ -2,6 +2,10 @@
 require_once("templates/top.php");
 require_once("libs/functions.php");
 if($_SESSION ['id']){
+?>
+<a href ='#' class='btn btn-block btn-success' id='google_search'>Поиск изображения</a>
+<div id='empty123'></div>
+<?php
 	//echo "<pre>";
 	//print_r ($auth_usr);
 	//echo"<pre>";
@@ -95,6 +99,7 @@ echo 'ошибка';
    <button type="submit" class="btn btn-default">Submit</button>
 </form>
 
+<script src='media/js/posing.js'> </script>
 
 <?php
 
